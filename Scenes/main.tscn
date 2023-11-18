@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://co62r13dmj0dd"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qvhaj"]
+size = Vector3(60, 2, 60)
+
+[sub_resource type="BoxMesh" id="BoxMesh_w65hp"]
+size = Vector3(60, 2, 60)
+
+[node name="Main" type="Node"]
+
+[node name="Ground" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
+shape = SubResource("BoxShape3D_qvhaj")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
+mesh = SubResource("BoxMesh_w65hp")
